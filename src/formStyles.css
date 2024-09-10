@@ -11,7 +11,7 @@
     background: #171929;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.7);
     border-radius: 27px;
-    
+    height: 80%;
   }
   
  
@@ -42,12 +42,16 @@
   
   /* Стили для инпутов */
   .input-field {
-    width: 100%; /* Инпуты занимают всю ширину контейнера */
+    width: 370px; /* Инпуты занимают всю ширину контейнера */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
+    display: flex;
+    border: none;
+    background: none;
+
   }
   
   /* Стили для ошибок */
@@ -62,6 +66,7 @@
     padding: 10px 3px;
     align-items: center;
     color: #fff;
+
   }
   .terms-link{
     color: #fff;

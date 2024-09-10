@@ -1,37 +1,30 @@
 <script>
-  export let type = 'text'; // По умолчанию тип 'text'
+  export let type = 'text';
   export let placeholder = '';
   export let value = '';
+  export let onInput;
   export let error = '';
+  
+  function handleInput(event) {
+    onInput(event);
+  }
 </script>
 
 <div class="input-container">
-  {#if type === 'text'}
-    <input
-      type="text"
-      placeholder={placeholder}
-      bind:value
-    />
-  {:else if type === 'email'}
-    <input
-      type="email"
-      placeholder={placeholder}
-      bind:value
-    />
-  {:else if type === 'tel'}
-    <input
-      type="tel"
-      placeholder={placeholder}
-      bind:value
-    />
-  {/if}
+  <input
+    type={type}
+    placeholder={placeholder}
+    value={value}
+    on:input={handleInput}
+    class="input-field"
+  />
   {#if error}
-    <span class="error-message">{error}</span>
+    <span class="error">{error}</span>
   {/if}
 </div>
 
 <style>
-.input-container {
+  .input-container {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -49,11 +42,12 @@
   width: 100%;
   height: 51px;
   border: none; /* Убираем стандартные границы */
-  border-bottom: 2px solid #3F4363; /* Нижняя граница по умолчанию */
+    border-bottom: 2px solid #3F4363; /* Нижняя граница по умолчанию */
+
   border-radius: 4px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  color: #000;
+  color: #fff;
   background: none;
   position: relative; /* Для позиционирования псевдоэлемента */
 }
@@ -81,7 +75,7 @@
   color: #FFFFFF; /* Цвет плейсхолдера при фокусе */
 }
 
-.error-message {
+.error {
   color: red;
   font-size: 0.875em;
   margin-top: 4px;

@@ -1,19 +1,30 @@
 <script>
   export let checked = false;
-  export let onChange = () => {};
+  export let onChange;
 </script>
 
-<div class="checkbox">
-  <input type="checkbox" bind:checked on:change={onChange} />
+<div class="checkbox-container">
+  <input
+    type="checkbox"
+    checked={checked}
+    on:change={onChange}
+    class="checkbox-input"
+  />
+  <label class="checkbox-label"> </label>
 </div>
 
 <style>
-  .checkbox {
+  .checkbox-container {
     display: flex;
     align-items: center;
-  }
 
-  input[type="checkbox"] {
-    margin-right: 10px;
+  }
+  
+  .checkbox-input {
+    margin-right: 8px;
+  }
+  
+  .checkbox-label {
+    font-size: 14px;
   }
 </style>
