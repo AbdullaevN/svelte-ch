@@ -1,0 +1,103 @@
+/* Если форма находится в обычном контейнере */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 0 auto; /* Горизонтальное центрирование */
+    padding: 40px 45px;
+    gap: 10px;
+    width: 390px;
+    height: 813px;
+    background: #171929;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.7);
+    border-radius: 27px;
+    height: 100%;
+  }
+  
+
+  /* formStyles.css */
+
+/* Основной контейнер формы */
+/* .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    padding: 40px 45px;
+    gap: 20px; 
+    width: 390px;
+    height: auto;  
+    background: #171929;  
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.7);  
+    border-radius: 27px;  
+  } */
+  
+  /* Стили для уведомлений об успешной отправке */
+  .notification {
+    background: #4CAF50; /* Цвет фона уведомления */
+    color: white; /* Цвет текста уведомления */
+    padding: 12px;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s;
+  }
+  
+  /* Стили для кнопки закрытия уведомления */
+  .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  /* Стили для инпутов */
+  .input-field {
+    width: 100%; /* Инпуты занимают всю ширину контейнера */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  /* Стили для ошибок */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .checkbox-container{
+    display: flex;
+    padding: 10px 3px;
+    align-items: center;
+    color: #fff;
+  }
+  .terms-link{
+    color: #fff;
+  }
+
+  
+  .span-main{
+    color: #fff;
+    text-align: center;
+    width: 60%;
+  }
+  h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  h4{
+    color: #fff;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+  }

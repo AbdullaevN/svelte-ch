@@ -16,5 +16,10 @@
 	background-color: var(--background-color);
 	margin: 0;
 	padding: 0;
+
+	background-image: url('https://kalix.club/uploads/posts/2023-12/1702397318_kalix-club-p-fon-mlechnii-put-pinterest-72.jpg');
+	background-size: cover; /* Покрытие всего фона */
+	background-position: center; /* Центрирование изображения */
+	background-repeat: no-repeat; /* Запрещаем повторение изображения */
   }
   
